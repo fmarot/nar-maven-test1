@@ -41,6 +41,7 @@
 				</configuration>
 			</plugin>
 
+			<!-- automatically add the target/nar/nar-generated directory as a source folder (usefull in Eclipse) -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
