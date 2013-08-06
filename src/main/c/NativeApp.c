@@ -1,7 +1,7 @@
 #include <stdio.h>
-#include "$com_teamtter_NativeApp.h"
+#include "com_teamtter_NativeApp.h"
 
-JNIEXPORT jstring JNICALL Java_${groupId.replace($a, $b)}_NativeApp_sayHello( JNIEnv *env, jobject obj ) {
+JNIEXPORT jstring JNICALL Java_com_teamtter_NativeApp_sayHello( JNIEnv *env, jobject obj ) {
 	jstring value; /* the return value */
 
 	char buf[40]; /* working buffer (really only need 20 ) */

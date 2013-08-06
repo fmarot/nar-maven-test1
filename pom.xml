@@ -31,6 +31,10 @@
 				<version>3.0.0-SNAPSHOT</version>
 				<extensions>true</extensions>
 				<configuration>
+					<c>
+						<debug>true</debug>
+					</c>
+
 					<libraries>
 						<library>
 							<!-- <narSystemDirectory>../generated-sources</narSystemDirectory> -->
@@ -39,6 +43,7 @@
 						</library>
 					</libraries>
 				</configuration>
+
 			</plugin>
 
 			<!-- automatically add the target/nar/nar-generated directory as a source folder (usefull in Eclipse) -->
@@ -65,7 +70,8 @@
 
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on 
+					the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -80,12 +86,26 @@
 										<versionRange>[3.0.0-SNAPSHOT,)</versionRange>
 										<goals>
 											<goal>nar-testCompile</goal>
+											<goal>nar-unpack</goal>
+											<goal>nar-system-generate</goal>
+											<goal>nar-gnu-resources</goal>
+											<goal>nar-resources</goal>
+											<goal>nar-download</goal>
+											<goal>nar-vcproj</goal>
+											<goal>nar-gnu-process</goal>
+											<goal>nar-gnu-configure</goal>
+											<goal>nar-compile</goal>
+											<goal>nar-validate</goal>
+											<goal>nar-gnu-make</goal>
+											<goal>nar-javah</goal>
+											<goal>nar-process-libraries</goal>
 										</goals>
 									</pluginExecutionFilter>
 									<action>
 										<ignore></ignore>
 									</action>
 								</pluginExecution>
+
 							</pluginExecutions>
 						</lifecycleMappingMetadata>
 					</configuration>
